@@ -240,6 +240,9 @@ nav a:hover {
 .menu-card:hover {
   transform: translateY(-8px);
 }
+img {
+  max-width: 100%;
+}
 @media (max-width: 900px) {
   header {
     padding: 25px;
@@ -317,7 +320,58 @@ nav a:hover {
     font-size: 32px;
   }
 }
+@media (max-width: 600px) {
+  header {
+    min-height: auto;
+    padding: 25px 18px 60px;
+  }
 
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+  }
+
+  nav div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  section {
+    padding: 50px 18px;
+  }
+
+  .menu-list {
+    flex-direction: column;
+  }
+}
 .footer-note {
   margin-top: 8px;
   font-size: 14px;
