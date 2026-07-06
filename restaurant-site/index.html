@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bella Vista Restaurant</title>
 
+         <link rel="stylesheet" href="style.css">
+    </head>
+
+
+    <body>
+        <header>
+            <nav>
+              <h2>Bella Vista</h2> 
+              <div> 
+              <a href="#menu">Меню</a>
+              <a href="#about">Про нас</a>
+              <a href="#booking">Бронювання</a>
+              <a href="#contact">Контакти</a>
+              </div>
+            </nav>
+            <div class="hero-text">
+                <h1>Італійський ресторан</h1>
+                <p>Свіжа паста, піца та затишна атмосфера в центрі міста.</p>
+                <a href="#booking" class="btn">Забронювати столик</a>
+            </div>
+        </header>
+        
+        <main>
+            <section id="menu">
+                <h2>Наше меню</h2>
+
+                <h3>Піца</h3>
+                <div class="menu-list">
+                <article class="menu-card">
+                    <img src="images/margherita.jpg" alt="Піца Маргарита"> 
+                    <h4>Піца Маргарита</h4>
+                    <p>Томатний соус, моцарела, базилік</p>
+                    <span>170 грн</span>
+               </article>
+
+               <article class="menu-card">
+                     <img src="images/pepperoni.jpg" alt="Піца Пепероні">
+                    <h4>Піца Пепероні</h4>
+                    <p>Салямі, моцарела, томатний соус</p>
+                    <span>210 грн</span>
+               </article>
+
+               <article class="menu-card">
+                    <img src="images/four-cheese.jpg" alt="Піца Чотири сири">
+                    <h4>Піца Чотири сири</h4>
+                    <p>Моцарела, дорблю, пармезан, гауда</p>
+                    <span>230 грн</span>
+               </article>
+               </div>
+
+               <h3>Паста</h3>
+               <div class="menu-list">
+                <article class="menu-card">
+                    <img src="images/carbonara.jpg" alt="Паста Карбонара">
+                    <h4>Карбонара</h4>
+                    <p>Паста, бекон, вершковий соус, пармезан</p>
+                    <span>190 грн</span>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/bolognese.jpg" alt="Паста Болоньєзе">
+                    <h4>Болоньєзе</h4>
+                    <p>Паста, м’ясний соус, томати, сир</p>
+                    <span>200 грн</span>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/seafood-pasta.jpg" alt="Паста з морепродуктами">
+                    <h4>Паста з морепродуктами</h4>
+                    <p>Паста, креветки, мідії, томатний соус, зелень</p>
+                    <span>240 грн</span>
+               </article>
+               </div>
+
+                <h3>Десерти</h3>
+               <div class="menu-list">
+                <article class="menu-card">
+                    <img src="images/tiramisu.jpg" alt="Тірамісу">
+                    <h4>Тірамісу</h4>
+                    <p>Класичний італійський десерт з кавою</p>
+                    <span>120 грн</span>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/panna-cotta.jpg" alt="Панакота">
+                    <h4>Панакота</h4>
+                    <p>Вершковий десерт з ягідним соусом.</p>
+                    <span>110 грн</span>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/cheesecake.jpg" alt="Чізкейк">
+                     <h4>Чізкейк</h4>
+                     <p>Ніжний сирний десерт з ягідним соусом</p>
+                     <span>130 грн</span>
+                </article>
+               </div> 
+            </section>
+
+            <section id="about" class="about-section">
+                <div class="about-text">
+             <h2>Про нас</h2>
+             <p>Bella Vista - це затишний італійський ресторан, де ми готуємо пасту,
+                піцу та десерти за традиційними рецептами.</p>
+                <p>
+                Ми створили місце для теплих зустрічей, сімейних вечерь та особливих вечорів.
+                </p>
+             </div>
+
+             <div class="about-image">
+                <img src="images/about.jpg" alt="Інтер’єр ресторану">
+             </div>
+            </section>
+
+            <section id="booking" class="booking-section">
+                <h2>Забронювати столик</h2>
+                <p>Залиште заявку, і ми зв’яжемося з вами для підтвердження бронювання.</p>
+
+                <form class="booking-form">
+                    <input type="text" placeholder="Ваше ім’я">
+                    <input type="tel" placeholder="Номер телефону">
+                    <input type="date">
+                    <input type="time"> 
+                    <button type="submit">Відправити заявку</button>    
+                </form>
+            </section>
+            
+            <section id="contact" class="contact-section">
+                <h2>Контакти</h2>
+
+                <div class="contact-info">
+                    <p><strong>Адреса:</strong> вул. Італійська 1*, Київ</p>
+                    <p><strong>Телефон:</strong> +380 63 549 ****</p>
+                    <p><strong>Email:</strong> bellavista*gmail.com</p>
+                    <p><strong>Графік:</strong> Пн–Нд 10:00–22:00</p>
+                </div>
+            </section>
+        </main>
+      <footer>
+       <p>© 2026 Bella Vista</p>
+       <p class="footer-note">Демо-сайт, створений для портфоліо веброзробника.</p>
+      </footer>
+
+    </body>
+</html>
