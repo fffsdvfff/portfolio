@@ -1,1 +1,325 @@
+html {
+  scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f1f1;
+    color: #040101;
+}
+header{
+    min-width: 100vh;
+    background-color: #e4bda7;
+    color: rgb(75, 45, 22);
+    padding: 30px 80px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav div{
+    display: flex;
+    gap: 30px;
+}
+nav a {
+  color: rgb(75, 45, 22);
+  text-decoration: none;
+  font-size: 17px;
+}
+.hero-text{
+    max-width: 600px;
+    margin-top: 60px;
+}
+.hero-text h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  color: #f5e7dd;
+}
+.btn {
+  display: inline-block;
+  background-color: #f0b35a;
+  color: #2b1d14;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+    padding: 80px;
+}
+#menu {
+  background-color: #fff8f0;
+}
 
+#menu h2 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2b1d14;
+}
+
+#menu h3 {
+  font-size: 28px;
+  margin: 40px 0 20px;
+  color: #8c4a2f;
+}
+.menu-list {
+  display: flex;
+  gap: 25px;
+}
+.menu-card {
+  flex: 1;
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.menu-card h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #2b1d14;
+}
+
+.menu-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6b4a3a;
+  margin-bottom: 15px;
+}
+
+.menu-card span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #b85c38;
+}
+.menu-card h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #2b1d14;
+}
+
+.menu-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6b4a3a;
+  margin-bottom: 15px;
+}
+
+.menu-card span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #b85c38;
+}
+.menu-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background-color: #f6eadf;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #2b1d14;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #5c4033;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.booking-section {
+  background-color: #8c7162;
+  color: white;
+  text-align: center;
+}
+
+.booking-section h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.booking-section p {
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.booking-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.booking-form input {
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.booking-form button {
+  grid-column: 1 / 3;
+  padding: 16px;
+  border: none;
+  border-radius: 30px;
+  background-color: #f0b35a;
+  color: #2b1d14;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact-section {
+  background-color: #fff8f0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #2b1d14;
+}
+
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 2;
+  color: #5c4033;
+}
+footer {
+  background-color: #2b1d14;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+nav a:hover {
+  color: #f0b35a;
+}
+
+.btn:hover,
+.booking-form button:hover {
+  background-color: white;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+}
+@media (max-width: 900px) {
+  header {
+    padding: 25px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav div {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-text {
+    margin-top: 120px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .menu-list {
+    flex-direction: column;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form button {
+    grid-column: 1;
+  }
+
+  section {
+    padding: 50px 25px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  nav h2 {
+    font-size: 26px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  .menu-card img {
+    height: 180px;
+  }
+
+  .about-image img {
+    height: 300px;
+  }
+
+  .booking-section h2,
+  .contact-section h2,
+  #menu h2,
+  .about-text h2 {
+    font-size: 32px;
+  }
+}
+
+.footer-note {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #cdb8aa;
+}
