@@ -1,379 +1,464 @@
-html {
-  scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f6f1f1;
-    color: #040101;
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
 }
+
+body{
+    font-family:"Montserrat",sans-serif;
+    background:#f6f1f1;
+    color:#2b1d14;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ---------------- HEADER ---------------- */
+
 header{
-    min-width: 100vh;
-    background-color: #e4bda7;
-    color: rgb(75, 45, 22);
-    padding: 30px 80px;
+    background:#e4bda7;
+    padding:30px 70px 70px;
 }
+
 nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
+
+nav h2{
+    font-family:"Playfair Display",serif;
+    font-size:44px;
+    font-weight:700;
+}
+
 nav div{
-    display: flex;
-    gap: 30px;
+    display:flex;
+    gap:40px;
 }
-nav a {
-  color: rgb(75, 45, 22);
-  text-decoration: none;
-  font-size: 17px;
+
+nav a{
+    text-decoration:none;
+    color:#4b2d16;
+    font-size:18px;
+    font-weight:500;
+    transition:.3s;
 }
+
+nav a:hover{
+    color:#f0b35a;
+}
+
+/* ---------------- HERO ---------------- */
+
 .hero-text{
-    max-width: 600px;
-    margin-top: 60px;
-}
-.hero-text h1 {
-  font-size: 64px;
-  margin-bottom: 20px;
-}
-.hero-text p {
-  font-size: 22px;
-  line-height: 1.5;
-  margin-bottom: 35px;
-  color: #f5e7dd;
-}
-.btn {
-  display: inline-block;
-  background-color: #f0b35a;
-  color: #2b1d14;
-  padding: 16px 32px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-}
-section {
-    padding: 80px;
-}
-#menu {
-  background-color: #fff8f0;
+    max-width:760px;
+    margin:70px auto 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
 }
 
-#menu h2 {
-  font-size: 42px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #2b1d14;
+.hero-text h1{
+    font-family:"Playfair Display",serif;
+    font-size:58px;
+    line-height:1.1;
+    margin-bottom:22px;
 }
 
-#menu h3 {
-  font-size: 28px;
-  margin: 40px 0 20px;
-  color: #8c4a2f;
-}
-.menu-list {
-  display: flex;
-  gap: 25px;
-}
-.menu-card {
-  flex: 1;
-  background-color: white;
-  padding: 25px;
-  border-radius: 15px;
-  transition: 0.3s;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-.menu-card h4 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #2b1d14;
+.hero-text p{
+    max-width:620px;
+    font-size:22px;
+    color:#fff7f1;
+    margin-bottom:35px;
 }
 
-.menu-card p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #6b4a3a;
-  margin-bottom: 15px;
+.btn{
+    display:inline-block;
+    padding:17px 40px;
+    background:#f0b35a;
+    color:#2b1d14;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+    border-radius:40px;
+    transition:.3s;
 }
 
-.menu-card span {
-  font-size: 18px;
-  font-weight: bold;
-  color: #b85c38;
-}
-.menu-card h4 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #2b1d14;
+.btn:hover{
+    background:white;
+    transform:translateY(-4px);
 }
 
-.menu-card p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #6b4a3a;
-  margin-bottom: 15px;
+/* ---------------- SECTIONS ---------------- */
+
+section{
+    padding:80px 70px;
 }
 
-.menu-card span {
-  font-size: 18px;
-  font-weight: bold;
-  color: #b85c38;
-}
-.menu-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
-.about-section {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  background-color: #f6eadf;
+#menu{
+    background:#fff8f0;
 }
 
-.about-text {
-  flex: 1;
+#menu h2{
+    font-family:"Playfair Display",serif;
+    text-align:center;
+    font-size:48px;
+    margin-bottom:18px;
 }
 
-.about-text h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-  color: #2b1d14;
+.title-line{
+    width:90px;
+    height:4px;
+    background:#f0b35a;
+    border-radius:10px;
+    margin:0 auto 55px;
 }
 
-.about-text p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #5c4033;
-  margin-bottom: 15px;
+#menu h3{
+    font-family:"Playfair Display",serif;
+    color:#8c4a2f;
+    font-size:32px;
+    margin-bottom:30px;
 }
 
-.about-image {
-  flex: 1;
+/* ---------------- MENU ---------------- */
+
+.menu-list{
+    display:flex;
+    gap:30px;
 }
 
-.about-image img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-.booking-section {
-  background-color: #8c7162;
-  color: white;
-  text-align: center;
+.menu-card{
+    flex:1;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.35s;
 }
 
-.booking-section h2 {
-  font-size: 42px;
-  margin-bottom: 15px;
+.menu-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
 }
 
-.booking-section p {
-  font-size: 18px;
-  margin-bottom: 35px;
+.menu-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    transition:.35s;
 }
 
-.booking-form {
-  max-width: 700px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.menu-card:hover img{
+    transform:scale(1.05);
 }
 
-.booking-form input {
-  padding: 16px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
+.menu-card h4{
+    font-size:24px;
+    margin:22px 22px 12px;
 }
 
-.booking-form button {
-  grid-column: 1 / 3;
-  padding: 16px;
-  border: none;
-  border-radius: 30px;
-  background-color: #f0b35a;
-  color: #2b1d14;
-  font-size: 17px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.contact-section {
-  background-color: #fff8f0;
-  text-align: center;
+.menu-card p{
+    margin:0 22px 18px;
+    color:#6b4a3a;
+    line-height:1.7;
 }
 
-.contact-section h2 {
-  font-size: 42px;
-  margin-bottom: 30px;
-  color: #2b1d14;
+.menu-card span{
+    display:block;
+    margin:0 22px 24px;
+    font-size:20px;
+    font-weight:700;
+    color:#b85c38;
+}
+/* ---------------- ABOUT ---------------- */
+
+.about-section{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    background:#f6eadf;
 }
 
-.contact-info {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 2;
-  color: #5c4033;
-}
-footer {
-  background-color: #2b1d14;
-  color: white;
-  text-align: center;
-  padding: 25px;
-}
-nav a:hover {
-  color: #f0b35a;
+.about-text{
+    flex:1;
 }
 
-.btn:hover,
-.booking-form button:hover {
-  background-color: white;
+.about-text h2{
+    font-family:"Playfair Display",serif;
+    font-size:46px;
+    margin-bottom:25px;
 }
 
-.menu-card:hover {
-  transform: translateY(-8px);
+.about-text p{
+    font-size:18px;
+    color:#5c4033;
+    margin-bottom:18px;
+    line-height:1.8;
 }
-img {
-  max-width: 100%;
+
+.about-image{
+    flex:1;
 }
-@media (max-width: 900px) {
-  header {
-    padding: 25px;
-  }
 
-  nav {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  nav div {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .hero-text {
-    margin-top: 120px;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 42px;
-  }
-
-  .menu-list {
-    flex-direction: column;
-  }
-
-  .about-section {
-    flex-direction: column;
-  }
-
-  .booking-form {
-    grid-template-columns: 1fr;
-  }
-
-  .booking-form button {
-    grid-column: 1;
-  }
-
-  section {
-    padding: 50px 25px;
-  }
+.about-image img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
-@media (max-width: 600px) {
-  .hero-text h1 {
-    font-size: 34px;
-  }
 
-  .hero-text p {
-    font-size: 18px;
-  }
+/* ---------------- BOOKING ---------------- */
 
-  nav h2 {
-    font-size: 26px;
-  }
-
-  nav a {
-    font-size: 15px;
-  }
-
-  .menu-card img {
-    height: 180px;
-  }
-
-  .about-image img {
-    height: 300px;
-  }
-
-  .booking-section h2,
-  .contact-section h2,
-  #menu h2,
-  .about-text h2 {
-    font-size: 32px;
-  }
+.booking-section{
+    background:#8c7162;
+    color:white;
+    text-align:center;
 }
-@media (max-width: 600px) {
-  header {
-    min-height: auto;
-    padding: 25px 18px 60px;
-  }
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    text-align: center;
-  }
-
-  nav div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  nav a {
-    font-size: 15px;
-  }
-
-  .hero-text {
-    max-width: 100%;
-    margin-top: 80px;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 38px;
-    line-height: 1.15;
-  }
-
-  .hero-text p {
-    font-size: 18px;
-  }
-
-  .btn {
-    padding: 14px 24px;
-    font-size: 16px;
-  }
-
-  section {
-    padding: 50px 18px;
-  }
-
-  .menu-list {
-    flex-direction: column;
-  }
+.booking-section h2{
+    font-family:"Playfair Display",serif;
+    font-size:46px;
+    margin-bottom:18px;
 }
-.footer-note {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #cdb8aa;
+
+.booking-section p{
+    font-size:18px;
+    margin-bottom:40px;
 }
+
+.booking-form{
+    max-width:750px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.booking-form input{
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+}
+
+.booking-form input:focus{
+    box-shadow:0 0 0 3px rgba(240,179,90,.35);
+}
+
+.booking-form button{
+    grid-column:1 / 3;
+    padding:17px;
+    border:none;
+    border-radius:35px;
+    background:#f0b35a;
+    color:#2b1d14;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.booking-form button:hover{
+    background:white;
+    transform:translateY(-3px);
+}
+
+/* ---------------- CONTACT ---------------- */
+
+.contact-section{
+    background:#fff8f0;
+    text-align:center;
+}
+
+.contact-section h2{
+    font-family:"Playfair Display",serif;
+    font-size:46px;
+    margin-bottom:35px;
+}
+
+.contact-info{
+    max-width:650px;
+    margin:0 auto;
+    font-size:18px;
+    line-height:2.2;
+    color:#5c4033;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+    background:#2b1d14;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+.footer-note{
+    margin-top:10px;
+    color:#ccb8aa;
+    font-size:14px;
+}
+
+/* ---------------- TABLET ---------------- */
+
+@media (max-width:900px){
+
+header{
+    padding:25px 35px 50px;
+}
+
+nav{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav h2{
+    font-size:38px;
+}
+
+nav div{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.hero-text{
+    margin-top:55px;
+}
+
+.hero-text h1{
+    font-size:44px;
+}
+
+.hero-text p{
+    font-size:20px;
+}
+
+section{
+    padding:60px 35px;
+}
+
+.menu-list{
+    flex-direction:column;
+}
+
+.about-section{
+    flex-direction:column;
+}
+
+.about-image img{
+    height:360px;
+}
+
+.booking-form{
+    grid-template-columns:1fr;
+}
+
+.booking-form button{
+    grid-column:auto;
+}
+
+}
+
+/* ---------------- PHONE ---------------- */
+
+@media (max-width:600px){
+
+header{
+    padding:20px 18px 45px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav h2{
+    font-size:30px;
+}
+
+nav div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+nav a{
+    font-size:15px;
+}
+
+.hero-text{
+    margin-top:30px;
+}
+
+.hero-text h1{
+    font-size:38px;
+}
+
+.hero-text p{
+    font-size:17px;
+}
+
+.btn{
+    width:100%;
+    max-width:280px;
+    text-align:center;
+    padding:15px;
+}
+
+section{
+    padding:50px 20px;
+}
+
+#menu h2,
+.about-text h2,
+.booking-section h2,
+.contact-section h2{
+    font-size:34px;
+}
+
+#menu h3{
+    font-size:26px;
+}
+
+.menu-card img{
+    height:190px;
+}
+
+.about-image img{
+    height:280px;
+}
+
+.contact-info{
+    font-size:17px;
+}
+
+footer{
+    padding:30px 20px;
+}
+
+}
+
+
