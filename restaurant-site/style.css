@@ -51,6 +51,7 @@ nav{
 
     background:rgba(255,255,255,.18);
     backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
     border:1px solid rgba(255,255,255,.35);
     border-radius:45px;
     box-shadow:0 10px 35px rgba(0,0,0,.18);
@@ -64,7 +65,7 @@ nav h2{
     text-shadow:0 4px 15px rgba(0,0,0,.45);
 }
 
-nav div{
+.nav-links{
     display:flex;
     gap:35px;
 }
@@ -157,13 +158,6 @@ section{
     margin:0 auto 55px;
 }
 
-#menu h3{
-    font-family:"Playfair Display",serif;
-    color:#8c4a2f;
-    font-size:32px;
-    margin-bottom:30px;
-}
-
 /* ---------------- MENU ---------------- */
 
 .menu-list{
@@ -175,8 +169,11 @@ section{
     gap:24px;
 }
 
+#menu .menu-list:last-of-type{
+    margin-bottom:0;
+}
+
 .menu-card{
-    flex:1;
     background:white;
     border-radius:18px;
     overflow:hidden;
@@ -333,8 +330,16 @@ section{
     background:white;
     padding:0 5px;
 }
+
 .input-box input:focus + label,
 .input-box input:valid + label{
+    top:0;
+    font-size:13px;
+    color:#b85c38;
+}
+
+.input-box input[type="date"] + label,
+.input-box input[type="time"] + label{
     top:0;
     font-size:13px;
     color:#b85c38;
@@ -396,7 +401,7 @@ nav h2{
     font-size:38px;
 }
 
-nav div{
+.nav-links{
     flex-wrap:wrap;
     justify-content:center;
     gap:18px;
@@ -419,7 +424,6 @@ section{
 }
 
 .menu-list{
-    flex-direction:column;
     grid-template-columns:1fr;
 }
 
@@ -460,13 +464,14 @@ nav{
     border-radius:25px;
     background:rgba(255,255,255,.16);
     backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
 }
 
 nav h2{
     font-size:30px;
 }
 
-nav div{
+.nav-links{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
