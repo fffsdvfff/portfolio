@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!form) return;
 
-    const phoneInput = form.querySelector('input[type="tel"]');
-    const dateInput = form.querySelector('input[type="date"]');
+    const phoneInput = document.getElementById("user-phone");
+    const dateInput = document.getElementById("booking-date");
+    const timeInput = document.getElementById("booking-time");
+
+    if (!phoneInput || !dateInput || !timeInput) return;
 
     function getTodayDate() {
         const today = new Date();
@@ -14,6 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const day = String(today.getDate()).padStart(2, "0");
 
         return `${year}-${month}-${day}`;
+    }
+
+    function getCurrentTime() {
+        const now = new Date();
+
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+
+        return `${hours}:${minutes}`;
     }
 
     const today = getTodayDate();
@@ -29,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const phoneValue = phoneInput.value.trim();
         const dateValue = dateInput.value;
+        const timeValue = timeInput.value;
 
         if (phoneValue.length < 10) {
             alert("Введіть коректний номер телефону. Мінімум 10 цифр.");
@@ -37,6 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (dateValue < today) {
             alert("Дата бронювання не може бути в минулому.");
+            return;
+        }
+
+        if (timeValue < "10:00" || timeValue > "22:00") {
+            alert("Бронювання можливе тільки з 10:00 до 22:00.");
+            return;
+        }
+
+        if (dateValue === today && timeValue <= getCurrentTime()) {
+            alert("Час бронювання на сьогодні не може бути в минулому.");
             return;
         }
 
