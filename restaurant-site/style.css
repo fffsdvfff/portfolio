@@ -34,7 +34,7 @@ header{
     padding:30px 70px 70px;
     background:
         linear-gradient(rgba(20,12,7,.62), rgba(20,12,7,.58)),
-        url("images/hero.jpg") center/cover no-repeat;
+        url("images/hero.JPG") center/cover no-repeat;
     color:white;
 }
 
@@ -410,22 +410,6 @@ footer{
 }
 
 /* ---------------- TABLET ---------------- */
-@media (min-width:901px){
-
-    nav{
-        position:fixed;
-        top:20px;
-        left:50%;
-        transform:translateX(-50%);
-        width:calc(100% - 140px);
-        z-index:1000;
-    }
-
-    header{
-        padding-top:130px;
-    }
-}
-
 
 @media (max-width:900px){
 
@@ -514,7 +498,7 @@ header{
     padding-top:110px;
     background:
         linear-gradient(rgba(20,12,7,.68), rgba(20,12,7,.62)),
-        url("images/hero.jpg") center/cover no-repeat;
+        url("images/hero.JPG") center/cover no-repeat;
 }
 
 nav{
