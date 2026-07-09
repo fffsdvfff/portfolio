@@ -34,7 +34,7 @@ header{
     padding:30px 70px 70px;
     background:
         linear-gradient(rgba(20,12,7,.62), rgba(20,12,7,.58)),
-        url("images/hero.JPG") center/cover no-repeat;
+        url("images/hero.jpg") center/cover no-repeat;
     color:white;
 }
 
@@ -49,12 +49,12 @@ nav{
     justify-content:space-between;
     align-items:center;
 
-    background:rgba(255,255,255,.18);
+    background:rgba(35,25,18,.65);
     backdrop-filter:blur(16px);
     -webkit-backdrop-filter:blur(16px);
-    border:1px solid rgba(255,255,255,.35);
+    border:1px solid rgba(255,255,255,.22);
     border-radius:45px;
-    box-shadow:0 10px 35px rgba(0,0,0,.18);
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
 }
 
 nav h2{
@@ -62,7 +62,7 @@ nav h2{
     font-size:42px;
     font-weight:700;
     color:#fffaf5;
-    text-shadow:0 4px 15px rgba(0,0,0,.45);
+    text-shadow:0 4px 15px rgba(0,0,0,.55);
 }
 
 .nav-links{
@@ -76,11 +76,21 @@ nav a{
     font-size:18px;
     font-weight:600;
     transition:.3s;
-    text-shadow:0 3px 10px rgba(0,0,0,.45);
+    text-shadow:0 3px 10px rgba(0,0,0,.55);
 }
 
 nav a:hover{
-    color:#d8a354;
+    color:#f0b35a;
+}
+
+.menu-toggle{
+    display:none;
+    border:none;
+    background:transparent;
+    color:#fff3ea;
+    font-size:30px;
+    cursor:pointer;
+    text-shadow:0 3px 10px rgba(0,0,0,.45);
 }
 
 /* ---------------- HERO ---------------- */
@@ -137,6 +147,7 @@ nav a:hover{
 
 section{
     padding:80px 70px;
+    scroll-margin-top:120px;
 }
 
 #menu{
@@ -310,15 +321,29 @@ section{
 .input-box{
     position:relative;
 }
+
 .input-box input{
     width:100%;
+    min-height:60px;
     padding:18px 16px;
     border:none;
     border-radius:12px;
     font-size:16px;
     outline:none;
     color:#2b1d14;
+    background:white;
 }
+
+.input-box input[type="date"],
+.input-box input[type="time"]{
+    appearance:none;
+    -webkit-appearance:none;
+
+    min-height:60px;
+    background:white;
+    color:#2b1d14;
+}
+
 .input-box label{
     position:absolute;
     left:16px;
@@ -385,6 +410,22 @@ footer{
 }
 
 /* ---------------- TABLET ---------------- */
+@media (min-width:901px){
+
+    nav{
+        position:fixed;
+        top:20px;
+        left:50%;
+        transform:translateX(-50%);
+        width:calc(100% - 140px);
+        z-index:1000;
+    }
+
+    header{
+        padding-top:130px;
+    }
+}
+
 
 @media (max-width:900px){
 
@@ -393,12 +434,13 @@ header{
 }
 
 nav{
-    flex-direction:column;
-    gap:20px;
+    flex-direction:row;
+    gap:18px;
+    padding:16px 24px;
 }
 
 nav h2{
-    font-size:38px;
+    font-size:34px;
 }
 
 .nav-links{
@@ -445,6 +487,23 @@ section{
 
 }
 
+
+@media (min-width:601px){
+
+    nav{
+        position:fixed;
+        top:20px;
+        left:50%;
+        transform:translateX(-50%);
+        width:calc(100% - 80px);
+        z-index:1000;
+    }
+
+    header{
+        padding-top:130px;
+    }
+}
+
 /* ---------------- PHONE ---------------- */
 
 @media (max-width:600px){
@@ -452,31 +511,63 @@ section{
 header{
     min-height:560px;
     padding:20px 18px 45px;
+    padding-top:110px;
     background:
         linear-gradient(rgba(20,12,7,.68), rgba(20,12,7,.62)),
-        url("images/hero.JPG") center/cover no-repeat;
+        url("images/hero.jpg") center/cover no-repeat;
 }
 
 nav{
-    flex-direction:column;
-    gap:15px;
-    padding:18px 20px;
+    position:fixed;
+    top:15px;
+    left:18px;
+    right:18px;
+    z-index:1000;
+
+    width:auto;
+    transform:none;
+
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:14px 20px;
     border-radius:25px;
-    background:rgba(255,255,255,.16);
+    background:rgba(35,25,18,.55);
     backdrop-filter:blur(15px);
     -webkit-backdrop-filter:blur(15px);
 }
 
 nav h2{
-    font-size:30px;
+    font-size:28px;
+}
+
+.menu-toggle{
+        display:block;
 }
 
 .nav-links{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:12px;
+    position:absolute;
+    top:75px;
+    left:0;
+    right:0;
+
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+
+    padding:22px;
+    border-radius:25px;
+    background:rgba(35,25,18,.85);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
 }
+
+.nav-links.active{
+    display:flex;
+}
+
 
 nav a{
     color:#fff3ea;
@@ -505,6 +596,7 @@ nav a{
 
 section{
     padding:50px 20px;
+    scroll-margin-top:120px;
 }
 
 #menu h2,
@@ -532,6 +624,22 @@ section{
 
 footer{
     padding:30px 20px;
+}
+
+.booking-form{
+    gap:22px;
+}
+
+.input-box input{
+    min-height:64px;
+    font-size:17px;
+    border-radius:18px;
+}
+
+.booking-form button{
+    min-height:64px;
+    font-size:18px;
+    border-radius:35px;
 }
 
 }
