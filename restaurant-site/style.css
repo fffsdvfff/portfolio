@@ -29,46 +29,66 @@ img{
 /* ---------------- HEADER ---------------- */
 
 header{
-    background:#e4bda7;
+    position:relative;
+    min-height:620px;
     padding:30px 70px 70px;
+    background:
+        linear-gradient(rgba(20,12,7,.62), rgba(20,12,7,.58)),
+        url("images/hero.jpg") center/cover no-repeat;
+    color:white;
 }
 
 nav{
+    position:relative;
+    z-index:2;
     max-width:1200px;
     margin:0 auto;
+    padding:18px 35px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:45px;
+    box-shadow:0 10px 35px rgba(0,0,0,.18);
 }
 
 nav h2{
     font-family:"Playfair Display",serif;
-    font-size:44px;
+    font-size:42px;
     font-weight:700;
+    color:#fffaf5;
+    text-shadow:0 4px 15px rgba(0,0,0,.45);
 }
 
 nav div{
     display:flex;
-    gap:40px;
+    gap:35px;
 }
 
 nav a{
     text-decoration:none;
-    color:#4b2d16;
+    color:#fff3ea;
     font-size:18px;
-    font-weight:500;
+    font-weight:600;
     transition:.3s;
+    text-shadow:0 3px 10px rgba(0,0,0,.45);
 }
 
 nav a:hover{
-    color:#f0b35a;
+    color:#d8a354;
 }
 
 /* ---------------- HERO ---------------- */
 
 .hero-text{
-    max-width:760px;
-    margin:70px auto 0;
+    position:relative;
+    z-index:2;
+    max-width:600px;
+    margin:60px auto 0;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -77,16 +97,21 @@ nav a:hover{
 
 .hero-text h1{
     font-family:"Playfair Display",serif;
-    font-size:58px;
+    font-size:52px;
     line-height:1.1;
     margin-bottom:22px;
+    color:#fffaf5;
+    text-shadow:0 6px 22px rgba(0,0,0,.6);
 }
 
 .hero-text p{
-    max-width:620px;
-    font-size:22px;
-    color:#fff7f1;
-    margin-bottom:35px;
+    max-width:850px;
+    font-size:23px;
+    color:#fff3ea;
+    font-weight:500;
+    margin-bottom:38px;
+    opacity:1;
+    text-shadow:0 4px 16px rgba(0,0,0,.65);
 }
 
 .btn{
@@ -99,6 +124,7 @@ nav a:hover{
     font-weight:700;
     border-radius:40px;
     transition:.3s;
+    box-shadow:0 10px 30px rgba(240,179,90,.3);
 }
 
 .btn:hover{
@@ -141,8 +167,12 @@ section{
 /* ---------------- MENU ---------------- */
 
 .menu-list{
-    display:flex;
-    gap:30px;
+    max-width:1180px;
+    margin:0 auto 55px;
+
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
 }
 
 .menu-card{
@@ -161,7 +191,7 @@ section{
 
 .menu-card img{
     width:100%;
-    height:230px;
+    height:200px;
     object-fit:cover;
     transition:.35s;
 }
@@ -171,20 +201,29 @@ section{
 }
 
 .menu-card h4{
-    font-size:24px;
-    margin:22px 22px 12px;
+    font-size:22px;
+    margin:20px 22px 10px;
+}
+
+#menu h3{
+    max-width:1180px;
+    margin:0 auto 28px;
+    font-family:"Playfair Display",serif;
+    color:#8c4a2f;
+    font-size:32px;
 }
 
 .menu-card p{
-    margin:0 22px 18px;
+    font-size:16px;
+    margin:0 22px 16px;
     color:#6b4a3a;
     line-height:1.7;
 }
 
 .menu-card span{
     display:block;
-    margin:0 22px 24px;
-    font-size:20px;
+    margin:0 22px 22px;
+    font-size:19px;
     font-weight:700;
     color:#b85c38;
 }
@@ -253,19 +292,6 @@ section{
     grid-template-columns:repeat(2,1fr);
     gap:20px;
 }
-
-.booking-form input{
-    padding:16px;
-    border:none;
-    border-radius:12px;
-    font-size:16px;
-    outline:none;
-}
-
-.booking-form input:focus{
-    box-shadow:0 0 0 3px rgba(240,179,90,.35);
-}
-
 .booking-form button{
     grid-column:1 / 3;
     padding:17px;
@@ -284,6 +310,39 @@ section{
     transform:translateY(-3px);
 }
 
+.input-box{
+    position:relative;
+}
+.input-box input{
+    width:100%;
+    padding:18px 16px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+    color:#2b1d14;
+}
+.input-box label{
+    position:absolute;
+    left:16px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#9b9b9b;
+    pointer-events:none;
+    transition:.25s;
+    background:white;
+    padding:0 5px;
+}
+.input-box input:focus + label,
+.input-box input:valid + label{
+    top:0;
+    font-size:13px;
+    color:#b85c38;
+}
+
+.input-box input:focus{
+    box-shadow:0 0 0 3px rgba(240,179,90,.35);
+}
 /* ---------------- CONTACT ---------------- */
 
 .contact-section{
@@ -361,6 +420,7 @@ section{
 
 .menu-list{
     flex-direction:column;
+    grid-template-columns:1fr;
 }
 
 .about-section{
@@ -386,12 +446,20 @@ section{
 @media (max-width:600px){
 
 header{
+    min-height:560px;
     padding:20px 18px 45px;
+    background:
+        linear-gradient(rgba(20,12,7,.68), rgba(20,12,7,.62)),
+        url("images/hero.jpg") center/cover no-repeat;
 }
 
 nav{
     flex-direction:column;
     gap:15px;
+    padding:18px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.16);
+    backdrop-filter:blur(15px);
 }
 
 nav h2{
@@ -406,11 +474,12 @@ nav div{
 }
 
 nav a{
+    color:#fff3ea;
     font-size:15px;
 }
 
 .hero-text{
-    margin-top:30px;
+    margin-top:75px;
 }
 
 .hero-text h1{
@@ -419,6 +488,7 @@ nav a{
 
 .hero-text p{
     font-size:17px;
+    line-height:1.6;
 }
 
 .btn{
@@ -460,5 +530,6 @@ footer{
 }
 
 }
+
 
 
