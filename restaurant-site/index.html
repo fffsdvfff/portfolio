@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
     <head>
         <meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Демо-сайт італійського ресторану Bella Vista з меню, інформацією про ресторан, формою бронювання та контактами.">
         <title>Bella Vista Restaurant</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +17,9 @@
 
     <body>
         <header>
-            <nav>
+            <nav aria-label="Головна навігація">
               <h2>Bella Vista</h2> 
-              <div> 
+              <div class="nav-links"> 
               <a href="#menu">Меню</a>
               <a href="#about">Про нас</a>
               <a href="#booking">Бронювання</a>
@@ -131,23 +132,42 @@
 
                 <form class="booking-form">
                      <div class="input-box">
-                        <input type="text" required>
-                        <label>Ваше ім'я</label>
+                        <input type="text"
+                            id="user-name"
+                            name="userName"
+                            autocomplete="name"
+                            required
+                        >
+                        <label  for="user-name">Ваше ім'я</label>
                      </div>
 
                      <div class="input-box">
-                        <input type="tel" required>
-                        <label>Номер телефону</label>
+                        <input type="tel"
+                            id="user-phone"
+                            name="userPhone"
+                            inputmode="numeric"
+                            autocomplete="tel"
+                            required
+                        >
+                        <label for="user-phone">Номер телефону</label>
                      </div>
 
                      <div class="input-box">
-                        <input type="date" required>
-                        <label>Дата бронювання</label>
+                        <input type="date" 
+                            id="booking-date"
+                            name="bookingDate" 
+                            required
+                        >
+                        <label for="booking-date">Дата бронювання</label>
                      </div>
 
                      <div class="input-box">
-                        <input type="time" required>
-                        <label>Час бронювання</label>
+                        <input type="time"
+                            id="booking-time"
+                            name="bookingTime" 
+                            required
+                        >
+                        <label for="booking-time">Час бронювання</label>
                      </div>
                     
                     <button type="submit">Відправити заявку</button>    
@@ -158,9 +178,9 @@
                 <h2>Контакти</h2>
 
                 <div class="contact-info">
-                    <p><strong>📍 Адреса:</strong> вул. Італійська 1*, Київ</p>
-                    <p><strong>☎ Телефон:</strong> +380 63 549 ****</p>
-                    <p><strong>✉ Email:</strong> bellavista*gmail.com</p>
+                    <p><strong>📍 Адреса:</strong> м. Київ, демо-адреса</p>
+                    <p><strong>☎ Телефон:</strong> +380 XX XXX XX XX</p>
+                    <p><strong>✉ Email:</strong> bellavista@example.com</p>
                     <p><strong>🕒 Графік:</strong> Пн–Нд 10:00–22:00</p>
                 </div>
             </section>
