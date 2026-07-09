@@ -4,10 +4,13 @@
         <meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bella Vista Restaurant</title>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
 
 
@@ -32,6 +35,7 @@
         <main>
             <section id="menu">
                 <h2>Наше меню</h2>
+                <div class="title-line"></div>
 
                 <h3>Піца</h3>
                 <div class="menu-list">
@@ -126,10 +130,26 @@
                 <p>Залиште заявку, і ми зв’яжемося з вами для підтвердження бронювання.</p>
 
                 <form class="booking-form">
-                    <input type="text" placeholder="Ваше ім’я">
-                    <input type="tel" placeholder="Номер телефону">
-                    <input type="date">
-                    <input type="time"> 
+                     <div class="input-box">
+                        <input type="text" required>
+                        <label>Ваше ім'я</label>
+                     </div>
+
+                     <div class="input-box">
+                        <input type="tel" required>
+                        <label>Номер телефону</label>
+                     </div>
+
+                     <div class="input-box">
+                        <input type="date" required>
+                        <label>Дата бронювання</label>
+                     </div>
+
+                     <div class="input-box">
+                        <input type="time" required>
+                        <label>Час бронювання</label>
+                     </div>
+                    
                     <button type="submit">Відправити заявку</button>    
                 </form>
             </section>
@@ -138,10 +158,10 @@
                 <h2>Контакти</h2>
 
                 <div class="contact-info">
-                    <p><strong>Адреса:</strong> вул. Італійська 1*, Київ</p>
-                    <p><strong>Телефон:</strong> +380 63 549 ****</p>
-                    <p><strong>Email:</strong> bellavista*gmail.com</p>
-                    <p><strong>Графік:</strong> Пн–Нд 10:00–22:00</p>
+                    <p><strong>📍 Адреса:</strong> вул. Італійська 1*, Київ</p>
+                    <p><strong>☎ Телефон:</strong> +380 63 549 ****</p>
+                    <p><strong>✉ Email:</strong> bellavista*gmail.com</p>
+                    <p><strong>🕒 Графік:</strong> Пн–Нд 10:00–22:00</p>
                 </div>
             </section>
         </main>
